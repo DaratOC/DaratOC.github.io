@@ -19,14 +19,3 @@ if (campaignInfo) {
     campaignInfo.hidden = false;
     sendAlert();
 }
-
-function sendAlert() {
-    fetch("https://flow.zoho.com/770061028/flow/webhook/incoming?zapikey=1001.09b34c90a0c4bd6530c6dbc9fa5905a1.b72544449bd83d50ee5c2c73d38ba456&isdebug=false", {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify({
-            lid: perimeterId,
-            timestamp: new Date().toISOString()
-        })
-    }).catch(console.error);
-}
