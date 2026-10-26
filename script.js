@@ -13,9 +13,3 @@ if (!isValidId) {
 console.info("Phishing training campaign ID detected.");
 
 const campaignInfo = document.getElementById("campaign-info");
-
-if (campaignInfo) {
-    campaignInfo.textContent = `Training reference: ${perimeterId}`;
-    campaignInfo.hidden = false;
-    sendAlert();
-}
